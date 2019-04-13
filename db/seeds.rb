@@ -238,8 +238,8 @@ psych_certifications = [
 ]
 language_array = ['Spanish', 'Chinese', 'Russian', 'French', 'Bengali', 'Hindi', 'Arabic', 'Yiddish', 'Polish', 'Tagalog', 'Korean']
 male_docs.each do |img|
-    Doctor.create(name: Faker::Name.male_first_name + " " + Faker::Name.last_name, location: nyc_neighborhoods.sample, years_experience: rand(2..6), gender: 'male', languages: ['English'] << language_array.sample, education: Faker::Educator.university, speciality: ['Psychology', 'Therapy', 'Psychiatry'].sample, img_url: img, board_certifications: [psych_certifications.sample, psych_certifications.sample] )
+    Doctor.create(name: Faker::Name.male_first_name + " " + Faker::Name.last_name, location: nyc_neighborhoods.sample, years_experience: rand(2..6), gender: 'male', languages: ['English, '] << language_array.sample, education: Faker::Educator.university, speciality: ['Psychology', 'Therapy', 'Psychiatry'].sample, img_url: img, board_certifications: [psych_certifications.sample, psych_certifications.sample] )
 end
 female_docs.each do |img|
-    Doctor.create(name: Faker::Name.female_first_name + " " + Faker::Name.last_name, location: nyc_neighborhoods.sample, years_experience: rand(2..6), gender: 'female', languages: ['English'] << language_array.sample, education: Faker::Educator.university, speciality: ['Psychology', 'Therapy', 'Psychiatry'].sample, img_url: img, board_certifications: [psych_certifications.sample, psych_certifications.sample] )
+    Doctor.create(name: Faker::Name.female_first_name + " " + Faker::Name.last_name, location: nyc_neighborhoods.sample, years_experience: rand(2..6), gender: 'female', languages: ['English, '] << language_array.sample, education: Faker::Educator.university, speciality: ['Psychology', 'Therapy', 'Psychiatry'].sample, img_url: img, board_certifications: [psych_certifications.sample, psych_certifications.sample] )
 end
