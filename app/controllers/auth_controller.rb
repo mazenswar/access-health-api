@@ -3,7 +3,7 @@ class AuthController < ApplicationController
 
   def show
     @token = decoded_token
-    @user_id = token[0]['user_id']
+    @user_id = @token[0]['user_id']
     @user = User.find(@user_id)
     render json: { user: @user }
   end

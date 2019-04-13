@@ -20,9 +20,19 @@ class UsersController < ApplicationController
    end
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    if @user.save
+      render json: @user
+    else
+      render json: { error: 'failed to update user' }, status: :not_acceptable
+    end
+  end
+
   private
 
   def user_params
-    params.permit(:username, :password, :email)
+    params.permit(:username, :password, :email, :user_info)
   end
 end
